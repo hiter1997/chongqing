@@ -16,6 +16,12 @@
             width: 100vw;
             height: 100vh;
         }
+        canvas{
+            border-bottom: solid 1px black;
+        }
+        .bottom{
+            max-height: 40px;
+        }
     </style>
 </head>
 <body>
@@ -36,7 +42,7 @@
 <script type="text/javascript">
     let canvas = document.getElementById('canvas');
     canvas.width = document.documentElement.clientWidth;
-    canvas.height = document.documentElement.clientHeight*0.9;
+    canvas.height = document.documentElement.clientHeight-40;
     
     let ctx = canvas.getContext('2d');
     let painting = false;
@@ -90,7 +96,7 @@
     }
     function deleteColor(){
         changeColor("white");
-        changeLineWidth(12);
+        changeLineWidth(20);
     }
    
 </script> 
