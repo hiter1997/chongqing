@@ -4,96 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>重庆</title>
+    <title>myCanvas</title>
     <style>
-        img {
-            max-width: 100%;
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .main{
+            display: block;
+            width: 100vw;
+            height: 100vh;
         }
     </style>
 </head>
 <body>
-    <h1 id="city">
-        重庆 CHONGQING
-    </h1>
-    <p>
-        重庆，简称“渝”，别称山城，是中华人民共和国省级行政区、直辖市、国家中心城市、超大城市 [201]  ，国务院批复确定的中国重要的中心城市之一、长江上游地区经济中心、国家重要的现代制造业基地、西南地区综合交通枢纽 [1]  。总面积8.24万平方千米，辖26个区、8个县、4个自治县 [2-4]  。截至2020年11月1日零时，重庆市常住人口为3205.42万人。
-    </p>
-    <h2 id="history">
-        <h3>古代</h3>
-            <ol>
-                <li>先秦时期，诸侯国巴国先后在今重庆地区的枳、江州、垫江建都。周慎靓王五年，秦惠文王更元九年（前316年），张仪入蜀灭巴之后，屯兵江州，筑江州城，城址在今渝中区长江、嘉陵江汇合处朝天门附近。</li>
-                <li>隋文帝开皇元年，以渝水绕城，改楚州为渝州，隶属信州，这是重庆简称“渝”的来历。唐代延续“渝州”之称，为剑南道夔州都督府辖区。</li>
-            </ol>
-        <h3>清朝开埠时期</h3>
-            <ol>
-                <li>1876年9月13日，英国以“滇案”为借口，迫使清政府签订了中英《烟台条约》，其中规定英国可向重庆派驻领事。</li>
-                <li>1895年，清帝国在甲午战争中被日本打败，根据当年4月签订的《马关条约》中规定，四川重庆成为中国第一批向日本开放的内陆通商口岸。</li>
-            </ol>
-        <h3>中华人民共和国时期</h3>
-            <ol>
-                <li>1949年11月30日，中国人民解放军进入重庆[28]，随后成为西南军政委员会驻地（一年半以后撤销），为西南大区代管的中央直辖市，而当时西南大区驻地亦设在重庆。</li>
-                <li>1954年7月，西南大区、川东行署区撤销，川东行署区首府北碚市并入重庆，重庆市从直辖市降为省辖市，重新与四川省合并。</li>
-                <li>2017年3月31日，国务院批复成立中国（重庆）自由贸易试验区。</li>
-            </ol>
-    </h2>
-    <h2 id="climate">气候</h2>
-    <ul>
-        <li>重庆属亚热带季风性湿润气候，年平均气温16~18℃，长江河谷的巴南、綦江、云阳等地达18.5℃以上，东南部的黔江、酉阳等地14~16℃，东北部海拔较高的城口仅13.7℃，最热月份平均气温26~29℃，最冷月平均气温4~8℃，采用候温法可以明显地划分四季。</li>
-        <li>重庆年平均相对湿度多在70%~80%，在中国属高湿区。年日照时数1000~1400小时，日照百分率仅为25%~35%，为中国年日照最少的地区之一，冬、春季日照更少，仅占全年的35%左右。</li>
-        <li>重庆在地形和气候双重作用下，多雾，素有“雾重庆”“雾都”之称。年平均雾日是104天，有世界雾都之称的英国伦敦年平均雾日只有94天，远东雾都的日本东京也只有55天。</li>
-    </ul>
-    <h2 id="place">区域划分</h2>
-    <table>
-        <caption>重庆区域划分</caption>
-        <thead>
-            <tr>
-                <th scope="col">名称</th>
-                <th scope="col">面积</th>
-                <th scope="col">邮编</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th scope="row">渝中区</th>
-                <td>23</td>
-                <td>400010</td>               
-            </tr>
-            <tr>
-                <th scope="row">渝北区</th>
-                <td>1457</td>
-                <td>401120</td>               
-            </tr>
-            <tr>
-                <th scope="row">江北区</th>
-                <td>221</td>
-                <td>400020</td>               
-            </tr>
-        </tbody>
-        <tfoot>
-            <th>总面积</th>
-            <td colspan="2">82402 </td>
-        </tfoot>
-    </table>
-    <h2 id="picture">图片</h2>
-    <div>
-        <a href="images/1.png" target="_blank">
-            <img width="400" src="images/1.png" alt="图1">
-        </a>
-    </div>
-    <div>
-        <a href="images/2.png" target="_blank">
-            <img width="400" src="images/2.png" alt="图2">
-        </a>
-    </div>
-    <div>
-        <a href="images/3.png" target="_blank">
-            <img width="400" src="images/3.png" alt="图3">
-        </a>
-    </div>
-    <div>
-        <a href="images/4.png" target="_blank">
-            <img width="400" src="images/4.png" alt="图4">
-        </a>
+    <div class="main">
+        <canvas id="canvas" width="100" height="100"></canvas>
+        <div class="bottom">
+            <button onclick="changeColor('red')" >红色</button>
+            <button onclick="changeColor('blue')">蓝色</button>
+            <button onclick="changeColor('black')">黑色</button>
+            
+            <button onclick="changeLineWidth(3)" >细线</button>
+            <button onclick="changeLineWidth(6)">粗线</button>
+            <button onclick="changeLineWidth(10)">超粗</button>
+            <button onclick="deleteColor()">橡皮擦</button>
+        </div>
     </div>
 </body>
+<script type="text/javascript">
+    let canvas = document.getElementById('canvas');
+    canvas.width = document.documentElement.clientWidth;
+    canvas.height = document.documentElement.clientHeight*0.9;
+    
+    let ctx = canvas.getContext('2d');
+    let painting = false;
+    let last;
+
+    ctx.fillStyle = "black";
+    ctx.strokeStyle = "black";
+
+    ctx.lineWidth =5;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+
+    var isTouchDevice = 'ontouchstart' in document.documentElement;
+    if(isTouchDevice){ //mobile
+        canvas.ontouchstart =(e)=>{
+            last = [e.touches[0].clientX,e.touches[0].clientY]
+        }
+        canvas.ontouchmove =(e)=>{
+            draw(last[0],last[1],e.touches[0].clientX,e.touches[0].clientY)
+            last = [e.touches[0].clientX,e.touches[0].clientY]
+        }
+    }else{ //pcX
+        canvas.onmousedown = (e)=>{
+            painting = true;
+            last = [e.clientX,e.clientY];
+        }
+        canvas.onmousemove = (e)=>{
+            if(painting === true){
+                this.draw(last[0],last[1],e.clientX,e.clientY)
+                last = [e.clientX,e.clientY];
+            }
+        }
+        canvas.onmouseup = (e)=>{
+            painting = false;
+        }
+    }
+   
+    function draw(x1,y1,x2,y2) {
+        ctx.beginPath();
+        ctx.moveTo(x1, y1);
+        ctx.lineTo(x2, y2);
+        ctx.stroke();
+    }
+
+    function changeColor(color) {
+        ctx.fillStyle = color;
+        ctx.strokeStyle = color;
+    }
+    function changeLineWidth(lineWidth) {
+        ctx.lineWidth =lineWidth;
+    }
+    function deleteColor(){
+        changeColor("white");
+        changeLineWidth(12);
+    }
+   
+</script> 
 </html>
